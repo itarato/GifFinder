@@ -1,0 +1,14 @@
+{{template "header.html" .}}
+
+<h1><a href="/">back</a> | Search results for: <em>{{.q}}<em></h1>
+
+<div id="results">
+  {{range .list}}
+    <div class="img-wrapper">
+      <img src="{{.Images.FixedHeight.Url}}"/>
+      <div class="img-label">
+        {{.Images.Original.Url}}
+      </div>
+    </div>
+  {{end}}
+</div>
